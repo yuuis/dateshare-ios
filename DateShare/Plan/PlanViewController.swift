@@ -67,6 +67,14 @@ class PlanViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //        }
 //    }
     
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        currentCameraPosition = position
+    }
+    
+    @IBAction func didPressBackButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .restricted:
@@ -85,14 +93,6 @@ class PlanViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
-    }
-    
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        currentCameraPosition = position
-    }
-    
-    @IBAction func didPressBackButton(_ sender: Any) {
-        dismiss(animated: true)
     }
     
     override func didReceiveMemoryWarning() {

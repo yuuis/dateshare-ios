@@ -19,6 +19,8 @@ class PlanViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     var currentCameraPosition: GMSCameraPosition?
     var zoomLevel: Float = 15.0
     var mapView: GMSMapView!
+    
+    let spots: [String:String] = ["ChIJ38WHZwf9KysRUhNblaFnglM": "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg", "ChIJwULG5WSOUDERbzafNHyqHZU": "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,7 +18,8 @@ class PlanRegisterViewController: UIViewController, CLLocationManagerDelegate, G
     var currentCameraPosition: GMSCameraPosition?
     var zoomLevel: Float = 30.0
     var mapView: GMSMapView!
-    var likelyPlaces: [GMSPlace] = []
+    
+    var spots: [String:String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,23 +67,17 @@ class PlanRegisterViewController: UIViewController, CLLocationManagerDelegate, G
         } else {
             mapView.animate(to: camera)
         }
-        
-        placesClient.currentPlace(callback: { [weak self] (placeLikelihoods, error) -> Void in
-            guard let `self` = self else { return }
-            
-            if let error = error {
-                print("Current Place error: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let likelihoodList = placeLikelihoods else { return }
-            
-            for likelihood in likelihoodList.likelihoods {
-                let place = likelihood.place
-                self.likelyPlaces.append(place)
-            }
-        })
     }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        print(coordinate)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
+        spots[placeID] = "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg"
+        print(spots)
+    }
+    
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         currentCameraPosition = position

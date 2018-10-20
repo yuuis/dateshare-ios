@@ -20,14 +20,14 @@ PODS:
   - FirebaseAnalytics (4.2.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
   - FirebaseAuth (4.6.1):
     - FirebaseAnalytics (~> 4.2)
-    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.20):
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
   - FirebaseStorage (2.2.0):
@@ -44,13 +44,13 @@ PODS:
   - GoogleToolboxForMac/DebugUtils (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GoogleToolboxForMac/Defines (2.1.4)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+  - GoogleToolboxForMac/NSData+zlib (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4):
     - GoogleToolboxForMac/DebugUtils (= 2.1.4)
     - GoogleToolboxForMac/Defines (= 2.1.4)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.4)
   - gRPC (1.15.1):
     - gRPC-RxLibrary (= 1.15.1)
     - gRPC/Main (= 1.15.1)
@@ -88,27 +88,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - Firestore (from `https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
-    - AlamofireImage
-    - BoringSSL-GRPC
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseAuth
-    - FirebaseCore
-    - FirebaseInstanceID
-    - FirebaseStorage
-    - GoogleToolboxForMac
-    - gRPC
-    - gRPC-Core
-    - gRPC-ProtoRPC
-    - gRPC-RxLibrary
-    - GTMSessionFetcher
-    - leveldb-library
-    - nanopb
-    - Protobuf
-
 EXTERNAL SOURCES:
   Firestore:
     :podspec: https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json
@@ -136,4 +115,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b20b35f0fa309dda8c9fc9e314113fc580732488
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0

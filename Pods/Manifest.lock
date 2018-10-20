@@ -1,13 +1,13 @@
 PODS:
   - Alamofire (4.7.3)
-  - AlamofireImage (3.3.1):
-    - Alamofire (~> 4.5)
-  - BoringSSL (10.0.6):
-    - BoringSSL/Implementation (= 10.0.6)
-    - BoringSSL/Interface (= 10.0.6)
-  - BoringSSL/Implementation (10.0.6):
-    - BoringSSL/Interface (= 10.0.6)
-  - BoringSSL/Interface (10.0.6)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - BoringSSL-GRPC (0.0.2):
+    - BoringSSL-GRPC/Implementation (= 0.0.2)
+    - BoringSSL-GRPC/Interface (= 0.0.2)
+  - BoringSSL-GRPC/Implementation (0.0.2):
+    - BoringSSL-GRPC/Interface (= 0.0.2)
+  - BoringSSL-GRPC/Interface (0.0.2)
   - Firebase/Auth (4.13.0):
     - Firebase/Core
     - FirebaseAuth (= 4.6.1)
@@ -51,27 +51,27 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.4)
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
-  - gRPC (1.14.1):
-    - gRPC-RxLibrary (= 1.14.1)
-    - gRPC/Main (= 1.14.1)
-  - gRPC-Core (1.14.1):
-    - gRPC-Core/Implementation (= 1.14.1)
-    - gRPC-Core/Interface (= 1.14.1)
-  - gRPC-Core/Implementation (1.14.1):
-    - BoringSSL (~> 10.0)
-    - gRPC-Core/Interface (= 1.14.1)
+  - gRPC (1.15.1):
+    - gRPC-RxLibrary (= 1.15.1)
+    - gRPC/Main (= 1.15.1)
+  - gRPC-Core (1.15.1):
+    - gRPC-Core/Implementation (= 1.15.1)
+    - gRPC-Core/Interface (= 1.15.1)
+  - gRPC-Core/Implementation (1.15.1):
+    - BoringSSL-GRPC (= 0.0.2)
+    - gRPC-Core/Interface (= 1.15.1)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.14.1)
-  - gRPC-ProtoRPC (1.14.1):
-    - gRPC-ProtoRPC/Main (= 1.14.1)
-  - gRPC-ProtoRPC/Main (1.14.1):
-    - gRPC (= 1.14.1)
-    - gRPC-RxLibrary (= 1.14.1)
+  - gRPC-Core/Interface (1.15.1)
+  - gRPC-ProtoRPC (1.15.1):
+    - gRPC-ProtoRPC/Main (= 1.15.1)
+  - gRPC-ProtoRPC/Main (1.15.1):
+    - gRPC (= 1.15.1)
+    - gRPC-RxLibrary (= 1.15.1)
     - Protobuf (~> 3.0)
-  - gRPC-RxLibrary (1.14.1)
-  - gRPC/Main (1.14.1):
-    - gRPC-Core (= 1.14.1)
-    - gRPC-RxLibrary (= 1.14.1)
+  - gRPC-RxLibrary (1.15.1)
+  - gRPC/Main (1.15.1):
+    - gRPC-Core (= 1.15.1)
+    - gRPC-RxLibrary (= 1.15.1)
   - GTMSessionFetcher/Core (1.2.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
@@ -82,7 +82,7 @@ PODS:
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
-  - AlamofireImage
+  - AlamofireImage (~> 3.4)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Storage
@@ -92,7 +92,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
-    - BoringSSL
+    - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -115,8 +115,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
-  BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
   FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
   FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
@@ -125,15 +125,15 @@ SPEC CHECKSUMS:
   FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
   Firestore: 5a33dcb27d8d33d4e82e032ee31ecd2904a72167
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  gRPC: 65fa2a50c4fd61940b76f4962d75c239c92c6a8d
-  gRPC-Core: e3ace1e1161e75903135de8d8231bb69c9d35721
-  gRPC-ProtoRPC: 78f976fc6a1eafc0e1f4965c255c313aa0859b1e
-  gRPC-RxLibrary: c4c826507ad3c8c8fab6887f153938eb04b86d59
+  gRPC: c1fa6fccfc3d31212f32aa7d4e40ab0452195ccb
+  gRPC-Core: 840d1068a0a57eeca00b52486897ad6265b8f0be
+  gRPC-ProtoRPC: 69552f09c9e8e6c253663668525b7c708814a9bd
+  gRPC-RxLibrary: 67a03bd22ef654e95fd7d6e4b9c5e62420a867b8
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: f227dc978ad431f28bc5b2e451191cb21ba38e61
+PODFILE CHECKSUM: b20b35f0fa309dda8c9fc9e314113fc580732488
 
 COCOAPODS: 1.5.3

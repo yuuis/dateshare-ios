@@ -31,6 +31,13 @@ class PlanListViewController: UIViewController {
         tableView.register(UINib(nibName: "PlanListCell", bundle: nil), forCellReuseIdentifier: "PlanListCell")
     }
     
+    @IBAction func didPressRegisterLinkButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "PlanRegisterViewController", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController() as! PlanRegisterViewController
+        present(viewController, animated: true)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

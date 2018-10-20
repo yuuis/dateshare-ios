@@ -1,5 +1,5 @@
 //
-//  PlanViewController.swift
+//  PlanRegisterViewController.swift
 //  DateShare
 //
 //  Created by KokiHirokawa on 2018/10/20.
@@ -10,18 +10,17 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class PlanViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
-    
-    var planID: Int!
+class PlanRegisterViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+
     var locationManager: CLLocationManager!
     var placesClient: GMSPlacesClient!
     var currentLocation: CLLocationCoordinate2D?
     var currentCameraPosition: GMSCameraPosition?
-    var zoomLevel: Float = 15.0
+    var zoomLevel: Float = 30.0
     var mapView: GMSMapView!
     
-    let spots: [String:String] = ["ChIJ38WHZwf9KysRUhNblaFnglM": "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg", "ChIJwULG5WSOUDERbzafNHyqHZU": "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg"]
-
+    var spots: [String:String] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -52,29 +51,36 @@ class PlanViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         placesClient = GMSPlacesClient.shared()
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let location = locations.last {
-//            currentLocation = location.coordinate
-//            let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
-//                                                  longitude: location.coordinate.longitude,
-//                                                  zoom: zoomLevel)
-//
-//            if mapView.isHidden {
-//                mapView.isHidden = false
-//                mapView.animate(to: camera)
-//            } else {
-//                mapView.animate(to: camera)
-//                calculateElevation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-//            }
-//        }
-//    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            return
+        }
+        
+        currentLocation = location.coordinate
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                              longitude: location.coordinate.longitude,
+                                              zoom: zoomLevel)
+        
+        if mapView.isHidden {
+            mapView.isHidden = false
+            mapView.animate(to: camera)
+        } else {
+            mapView.animate(to: camera)
+        }
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        print(coordinate)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
+        spots[placeID] = "http://hdk-prod-static-contents.s3.amazonaws.com/uploads/images/posts/20669/thumbnail/tmp/main_f6e60243-891a-4941-b238-fdba8d4cb3d2.jpg"
+        print(spots)
+    }
+    
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         currentCameraPosition = position
-    }
-    
-    @IBAction func didPressBackButton(_ sender: Any) {
-        dismiss(animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

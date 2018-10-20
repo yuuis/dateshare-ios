@@ -11,6 +11,8 @@ target 'DateShare' do
     pod 'Firestore', :podspec => 'https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json'
     pod 'AlamofireImage', '~> 3.4'
     pod 'GoogleSignIn'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
   # Pods for DateShare
 

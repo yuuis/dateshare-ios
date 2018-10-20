@@ -25,22 +25,39 @@
                                     <outlet property="delegate" destination="a2L-2H-LrA" id="S37-qH-FpC"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMp-c5-WrP">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J2-4s-mQn">
                                 <rect key="frame" x="271" y="563" width="88" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMp-c5-WrP">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="0ov-nZ-mRK"/>
+                                            <constraint firstAttribute="width" constant="88" id="Xnf-Eh-W4T"/>
+                                        </constraints>
+                                        <state key="normal" title="追加">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressRegisterLinkButton:" destination="a2L-2H-LrA" eventType="touchUpInside" id="XRl-ao-1e1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="0ov-nZ-mRK"/>
-                                    <constraint firstAttribute="width" constant="88" id="Xnf-Eh-W4T"/>
+                                    <constraint firstItem="LMp-c5-WrP" firstAttribute="top" secondItem="3J2-4s-mQn" secondAttribute="top" id="DBc-dA-IwZ"/>
+                                    <constraint firstItem="LMp-c5-WrP" firstAttribute="leading" secondItem="3J2-4s-mQn" secondAttribute="leading" id="GBM-7S-9hO"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMp-c5-WrP" secondAttribute="trailing" id="fKK-Lm-k9u"/>
+                                    <constraint firstAttribute="bottom" secondItem="LMp-c5-WrP" secondAttribute="bottom" id="joN-zU-JBP"/>
                                 </constraints>
-                                <state key="normal" title="追加"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LMp-c5-WrP" secondAttribute="trailing" constant="16" id="7c2-es-AoJ"/>
+                            <constraint firstAttribute="trailing" secondItem="3J2-4s-mQn" secondAttribute="trailing" constant="16" id="A4Y-4U-YhW"/>
                             <constraint firstItem="cq2-zG-jZV" firstAttribute="top" secondItem="dcb-0t-hXY" secondAttribute="top" id="C48-o2-4XL"/>
                             <constraint firstItem="dcb-0t-hXY" firstAttribute="trailing" secondItem="cq2-zG-jZV" secondAttribute="trailing" id="JA6-Bg-sNR"/>
+                            <constraint firstAttribute="bottom" secondItem="3J2-4s-mQn" secondAttribute="bottom" constant="16" id="hun-KR-DKJ"/>
                             <constraint firstItem="cq2-zG-jZV" firstAttribute="leading" secondItem="rqI-5J-f9X" secondAttribute="leading" id="k8G-YP-ek7"/>
-                            <constraint firstItem="dcb-0t-hXY" firstAttribute="bottom" secondItem="LMp-c5-WrP" secondAttribute="bottom" constant="16" id="oL6-16-lKr"/>
                             <constraint firstItem="dcb-0t-hXY" firstAttribute="bottom" secondItem="cq2-zG-jZV" secondAttribute="bottom" id="qg0-jC-fBg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dcb-0t-hXY"/>

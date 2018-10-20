@@ -17,17 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここにGoogleMap!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZ5-xo-eJm">
-                                <rect key="frame" x="110" y="323" width="155" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41b-FO-Q8G">
+                                <rect key="frame" x="16" y="585" width="66" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0h-ah-qqF">
+                                        <rect key="frame" x="17.5" y="18" width="31" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="didPressBackButton:" destination="Ruc-FY-mrC" eventType="touchUpInside" id="iQb-G5-VqT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="g0h-ah-qqF" firstAttribute="centerX" secondItem="41b-FO-Q8G" secondAttribute="centerX" id="PK2-dj-bk8"/>
+                                    <constraint firstItem="g0h-ah-qqF" firstAttribute="centerY" secondItem="41b-FO-Q8G" secondAttribute="centerY" id="ULr-1l-mQd"/>
+                                    <constraint firstAttribute="width" constant="66" id="a2T-vH-kQ2"/>
+                                    <constraint firstAttribute="height" constant="66" id="oxB-Os-CMT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tZ5-xo-eJm" firstAttribute="centerY" secondItem="MMR-wF-csQ" secondAttribute="centerY" id="BWR-3l-tMK"/>
-                            <constraint firstItem="tZ5-xo-eJm" firstAttribute="centerX" secondItem="MMR-wF-csQ" secondAttribute="centerX" id="npV-RG-e0x"/>
+                            <constraint firstItem="41b-FO-Q8G" firstAttribute="leading" secondItem="MMR-wF-csQ" secondAttribute="leading" constant="16" id="FF0-bt-hM9"/>
+                            <constraint firstAttribute="bottom" secondItem="41b-FO-Q8G" secondAttribute="bottom" constant="16" id="VqI-ft-2nZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9mw-vt-il1"/>
                     </view>

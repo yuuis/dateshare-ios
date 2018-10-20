@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class PlanListCell: UITableViewCell {
 
+    @IBOutlet weak var planImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -17,6 +20,10 @@ class PlanListCell: UITableViewCell {
     }
     
     func setupView(_ plan: PlanEntity) {
+        guard let imageUrl = URL(string: plan.imageUrlString) else {
+            return
+        }
+        planImageView.af_setImage(withURL: imageUrl)
         titleLabel.text = plan.title
     }
 

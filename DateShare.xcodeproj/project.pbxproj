@@ -14,6 +14,12 @@
 		43042445217AC428007BB8C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43042443217AC428007BB8C0 /* LaunchScreen.storyboard */; };
 		43E97BE0217ACA3F00B4F7E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E97BDF217ACA3F00B4F7E5 /* PostService.swift */; };
 		43E97BE2217ACDFE00B4F7E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43E97BE1217ACDFE00B4F7E5 /* GoogleService-Info.plist */; };
+		43E97BE4217ADAEF00B4F7E5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E97BE3217ADAEF00B4F7E5 /* StorageService.swift */; };
+		43E97BE6217ADC1300B4F7E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E97BE5217ADC1300B4F7E5 /* Login.storyboard */; };
+		43E97BE8217ADEEC00B4F7E5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E97BE7217ADEEC00B4F7E5 /* LogInViewController.swift */; };
+		43F8FA75217AE27100D9B598 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8FA74217AE27100D9B598 /* Post.swift */; };
+		43F8FA77217AE28700D9B598 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8FA76217AE28700D9B598 /* Spot.swift */; };
+		43F8FA79217AE6DA00D9B598 /* StorageReferenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8FA78217AE6DA00D9B598 /* StorageReferenceHelper.swift */; };
 		FEA3C2A1B3883F5B7E5736BE /* Pods_DateShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B471244BD20979E52C15E2 /* Pods_DateShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +34,12 @@
 		43042446217AC428007BB8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43E97BDF217ACA3F00B4F7E5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		43E97BE1217ACDFE00B4F7E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		43E97BE3217ADAEF00B4F7E5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		43E97BE5217ADC1300B4F7E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		43E97BE7217ADEEC00B4F7E5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		43F8FA74217AE27100D9B598 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		43F8FA76217AE28700D9B598 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		43F8FA78217AE6DA00D9B598 /* StorageReferenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReferenceHelper.swift; sourceTree = "<group>"; };
 		59B38F21801B2ADA3C4D1956 /* Pods-DateShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateShare/Pods-DateShare.release.xcconfig"; sourceTree = "<group>"; };
 		F73E8AA254EFD9C9E33CFD20 /* Pods-DateShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateShare/Pods-DateShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +77,7 @@
 		43042439217AC424007BB8C0 /* DateShare */ = {
 			isa = PBXGroup;
 			children = (
+				43F8FA73217AE25E00D9B598 /* models */,
 				43E97BDE217AC92A00B4F7E5 /* helpers */,
 				4304243A217AC424007BB8C0 /* AppDelegate.swift */,
 				4304243C217AC424007BB8C0 /* ViewController.swift */,
@@ -73,6 +86,8 @@
 				43042443217AC428007BB8C0 /* LaunchScreen.storyboard */,
 				43042446217AC428007BB8C0 /* Info.plist */,
 				43E97BE1217ACDFE00B4F7E5 /* GoogleService-Info.plist */,
+				43E97BE5217ADC1300B4F7E5 /* Login.storyboard */,
+				43E97BE7217ADEEC00B4F7E5 /* LogInViewController.swift */,
 			);
 			path = DateShare;
 			sourceTree = "<group>";
@@ -81,8 +96,19 @@
 			isa = PBXGroup;
 			children = (
 				43E97BDF217ACA3F00B4F7E5 /* PostService.swift */,
+				43E97BE3217ADAEF00B4F7E5 /* StorageService.swift */,
+				43F8FA78217AE6DA00D9B598 /* StorageReferenceHelper.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		43F8FA73217AE25E00D9B598 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				43F8FA74217AE27100D9B598 /* Post.swift */,
+				43F8FA76217AE28700D9B598 /* Spot.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		66289F702C67F958C5533078 /* Frameworks */ = {
@@ -114,6 +140,7 @@
 				43042434217AC424007BB8C0 /* Frameworks */,
 				43042435217AC424007BB8C0 /* Resources */,
 				98E41E80694270B88AB40D2B /* [CP] Embed Pods Frameworks */,
+				D53CCAC98081F8A5060988A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,7 @@
 				43042445217AC428007BB8C0 /* LaunchScreen.storyboard in Resources */,
 				43E97BE2217ACDFE00B4F7E5 /* GoogleService-Info.plist in Resources */,
 				43042442217AC428007BB8C0 /* Assets.xcassets in Resources */,
+				43E97BE6217ADC1300B4F7E5 /* Login.storyboard in Resources */,
 				43042440217AC424007BB8C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +228,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -215,6 +244,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -230,6 +260,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateShare/Pods-DateShare-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D53CCAC98081F8A5060988A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DateShare/Pods-DateShare-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateShare/Pods-DateShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -238,7 +286,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4304243D217AC424007BB8C0 /* ViewController.swift in Sources */,
+				43E97BE4217ADAEF00B4F7E5 /* StorageService.swift in Sources */,
 				43E97BE0217ACA3F00B4F7E5 /* PostService.swift in Sources */,
+				43F8FA79217AE6DA00D9B598 /* StorageReferenceHelper.swift in Sources */,
+				43F8FA75217AE27100D9B598 /* Post.swift in Sources */,
+				43E97BE8217ADEEC00B4F7E5 /* LogInViewController.swift in Sources */,
+				43F8FA77217AE28700D9B598 /* Spot.swift in Sources */,
 				4304243B217AC424007BB8C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,10 +48,10 @@ extension PlanListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "VideoViewController", bundle: nil)
-//        let viewController = storyboard.instantiateInitialViewController() as! VideoViewController
-//        viewController.video = videos[indexPath.row]
-//        navigationController?.pushViewController(viewController, animated: true)
+        let storyboard = UIStoryboard(name: "PlanViewController", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController() as! PlanViewController
+        viewController.planID = plans[indexPath.row].id
+        present(viewController, animated: true)
     }
 }
 

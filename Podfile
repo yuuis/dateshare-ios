@@ -9,7 +9,7 @@ target 'DateShare' do
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     pod 'Firestore', :podspec => 'https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json'
-    pod 'AlamofireImage'
+    pod 'AlamofireImage', '~> 3.4'
 
   # Pods for DateShare
 

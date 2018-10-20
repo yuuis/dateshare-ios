@@ -47,7 +47,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## BoringSSL
+## BoringSSL-GRPC
 
 BoringSSL is a fork of OpenSSL. As such, large parts of it fall under OpenSSL
 licensing. Files that are completely new have a Google copyright and an ISC

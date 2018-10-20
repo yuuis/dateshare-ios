@@ -1,0 +1,6 @@
+framework module Pods_DateShare {
+  umbrella header "Pods-DateShare-umbrella.h"
+
+  export *
+  module * { export * }
+}

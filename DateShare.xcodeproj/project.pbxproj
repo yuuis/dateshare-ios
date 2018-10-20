@@ -12,9 +12,11 @@
 		43042440217AC424007BB8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4304243E217AC424007BB8C0 /* Main.storyboard */; };
 		43042442217AC428007BB8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43042441217AC428007BB8C0 /* Assets.xcassets */; };
 		43042445217AC428007BB8C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43042443217AC428007BB8C0 /* LaunchScreen.storyboard */; };
+		FEA3C2A1B3883F5B7E5736BE /* Pods_DateShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B471244BD20979E52C15E2 /* Pods_DateShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39B471244BD20979E52C15E2 /* Pods_DateShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43042437217AC424007BB8C0 /* DateShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4304243A217AC424007BB8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4304243C217AC424007BB8C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		43042441217AC428007BB8C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43042444217AC428007BB8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43042446217AC428007BB8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B38F21801B2ADA3C4D1956 /* Pods-DateShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateShare/Pods-DateShare.release.xcconfig"; sourceTree = "<group>"; };
+		F73E8AA254EFD9C9E33CFD20 /* Pods-DateShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateShare/Pods-DateShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA3C2A1B3883F5B7E5736BE /* Pods_DateShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				43042439217AC424007BB8C0 /* DateShare */,
 				43042438217AC424007BB8C0 /* Products */,
+				B84FA5F176B05E421ED8E004 /* Pods */,
+				66289F702C67F958C5533078 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = DateShare;
 			sourceTree = "<group>";
 		};
+		66289F702C67F958C5533078 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39B471244BD20979E52C15E2 /* Pods_DateShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B84FA5F176B05E421ED8E004 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F73E8AA254EFD9C9E33CFD20 /* Pods-DateShare.debug.xcconfig */,
+				59B38F21801B2ADA3C4D1956 /* Pods-DateShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43042449217AC428007BB8C0 /* Build configuration list for PBXNativeTarget "DateShare" */;
 			buildPhases = (
+				2244C37CD1B9D86A943E549B /* [CP] Check Pods Manifest.lock */,
 				43042433217AC424007BB8C0 /* Sources */,
 				43042434217AC424007BB8C0 /* Frameworks */,
 				43042435217AC424007BB8C0 /* Resources */,
+				98E41E80694270B88AB40D2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2244C37CD1B9D86A943E549B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DateShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98E41E80694270B88AB40D2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DateShare/Pods-DateShare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateShare/Pods-DateShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43042433217AC424007BB8C0 /* Sources */ = {
@@ -280,6 +367,7 @@
 		};
 		4304244A217AC428007BB8C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F73E8AA254EFD9C9E33CFD20 /* Pods-DateShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +386,7 @@
 		};
 		4304244B217AC428007BB8C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B38F21801B2ADA3C4D1956 /* Pods-DateShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
